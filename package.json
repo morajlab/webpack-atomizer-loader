@@ -1,0 +1,75 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morajlab/webpack-atomizer-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "atomic",
+    "atomizer",
+    "plugin",
+    "atomizer-plugin",
+    "webpack-atomizer"
+  ],
+  "bugs": {
+    "url": "https://github.com/morajlab/webpack-atomizer-plugin/issues"
+  },
+  "homepage": "https://github.com/morajlab/webpack-atomizer-plugin#readme",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "webpack-atomizer-plugin",
+  "author": {
+    "name": "Morteza Jamali",
+    "email": "mortezajamali4241@gmail.com",
+    "url": "https://morteza-jamali.github.io"
+  },
+  "module": "dist/webpack-atomizer-plugin.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/webpack-atomizer-plugin.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/webpack-atomizer-plugin.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.9.2",
+    "husky": "^5.1.3",
+    "size-limit": "^4.9.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.2"
+  }
+}
