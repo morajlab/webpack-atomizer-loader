@@ -27,9 +27,10 @@
     "node": ">=10"
   },
   "scripts": {
+    "task:content": "ts-node ./task/content.ts",
     "task:copy": "ts-node ./task/copy.ts",
     "start": "tsdx watch",
-    "build": "tsdx build && npm run task:copy",
+    "build": "tsdx build && npm run task:content && npm run task:copy",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
