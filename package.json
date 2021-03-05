@@ -15,13 +15,12 @@
     "url": "https://github.com/morajlab/webpack-atomizer-plugin/issues"
   },
   "homepage": "https://github.com/morajlab/webpack-atomizer-plugin#readme",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -30,7 +29,7 @@
     "task:content": "ts-node ./task/content.ts",
     "task:copy": "ts-node ./task/copy.ts",
     "start": "tsdx watch",
-    "build": "tsdx build && npm run task:content && npm run task:copy",
+    "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -75,5 +74,8 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "atomizer": "^3.9.1"
   }
 }
